@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: orange; 
+    color: green; 
+}
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    background-color: #444; /* новий темний фон */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#slider {
+    width: 50vw;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    background-color: #ccc; 
+    color: #000; 
+}
+  
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slide::marker {
+    content: none;
+}
+  
+.slide:first-child {
+    display: block;
+}
+
+.slide-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: wrap;
+    font-size: 2rem;
+}
+
+.navigator-container {
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+    background-color: #964b26; /* новий фон для контейнера навігатора */
+}
+
+.pager {
+    font-weight: 900;
+    /* color: #a1a1a1; */
+    color: #ffc6a5;
+    text-align: center;
+}
+
+.arrows a {
+    position: absolute;
+    text-decoration: none;
+    /* color: rgba(255, 255, 255, 0.753); */
+    color: #ffc6a5;
+    left: 15px;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 42px;
+    height: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: all 0.3s ease 0s;
+}
+
+.arrows a:last-child {
+    right: 15px;
+    left: auto;
+}
+
+.arrows a:hover {
+    color: #fff;
+}
+
+.arrows a.next {
+    left: initial;
+    right: 15px;    
+}
+
+.answer-block {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: #c26c10;
+    margin: 5px;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    gap: 5px;
+    border-radius: 15px;
+}
+
+.answer-block input {
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.247);
+    color: white;
+    text-align: center;
+}
+
+.statistic {
+    color: white;
+}
+
+.line-border {
+    position: absolute;
+    width: 100%;
+    height: 3%;
+    background: rgb(191,94,255);
+    background: linear-gradient(90deg, rgba(191,94,255,1) 27%, rgba(56,11,78,1) 27%, rgba(73,9,121,1) 29%, rgba(121,67,9,1) 100%);
+    bottom: 0;
+}
+
+@media (max-width: 750px) {
+    * {
+        font-size: 1rem !important;
+    }
+}
